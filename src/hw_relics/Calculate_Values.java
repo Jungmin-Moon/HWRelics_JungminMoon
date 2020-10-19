@@ -56,4 +56,16 @@ public class Calculate_Values {
         return oresNeeded - currentOres;
     }
     
+    public int shellsNeedToGet(int currentShells) {
+        return shellsNeeded - currentShells;
+    }
+    
+    public int seedsNeedToGet(int currentSeeds) {
+        return seedsNeeded - currentSeeds;
+    }
+    
+    public int boneToGet(int currentBone) {
+        return boneNeeded - currentBone;
+    }
+    
 }
