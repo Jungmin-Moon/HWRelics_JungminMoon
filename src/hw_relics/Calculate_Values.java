@@ -52,6 +52,8 @@ public class Calculate_Values {
         return bonesPerOneRelic * relicCount;
     }
     
-    
+    public int oresNeedToGet(int currentOres) {
+        return oresNeeded - currentOres;
+    }
     
 }
