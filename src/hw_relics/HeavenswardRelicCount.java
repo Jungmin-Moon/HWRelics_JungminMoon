@@ -89,6 +89,28 @@ public class HeavenswardRelicCount implements Serializable{
     public void addBone(int bones) {
         boneObtained += bones;
     }
+    
+    public void addAetherOil(int oil) {
+        aetherOilObtained += oil;
+    }
+    
+    public void addSingingCluster(int cluster) {
+        singingClusterObtained += cluster;
+    }
+    
+    public void addPneumite(int pneumite) {
+        pneumiteObtained += pneumite;
+    }
+    
+    public void addSand(int sand) {
+        sandObtained += sand;
+    }
+    
+    public void addUmbrite(int umbrite) {
+        umbriteObtained += umbrite;
+    }
+    
+    
     //TODO
     
     /*
