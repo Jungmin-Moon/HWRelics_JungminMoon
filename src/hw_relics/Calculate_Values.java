@@ -23,6 +23,14 @@ public class Calculate_Values {
     private int shellsNeeded;
     private int seedsNeeded;
     private int boneNeeded;
+    private int minimumSandNeed;
+    private int maximumSandNeed;
+    private int minimumUmbriteNeed;
+    private int maximumUmbriteNeed;
+    private int oilNeeded;
+    private int singingClusterNeeded;
+    private int pneumiteNeeded;
+    private int inkNeeded;
     
     Calculate_Values() {
         oresNeeded = 0;
