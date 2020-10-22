@@ -22,7 +22,7 @@ public class HW_Relics {
         
         System.out.println(calcValues.totalOresNeeded(Poetics.UNIDENTIFIABLE_BONES.getNeededOneRelic(), hwRC.getRelicCount()));
         
-        System.out.print("How many bones do you currently have?");
+        System.out.print("How many ores do you currently have?");
         Scanner scanner = new Scanner(System.in);
         int currentOres = scanner.nextInt();
         
