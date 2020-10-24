@@ -76,4 +76,14 @@ public class Calculate_Values {
         return boneNeeded - currentBone;
     }
     
+    
+    public int minSandNeedCalc(int relicCount, int minSandPer1) {
+        minimumSandNeed = relicCount * minSandPer1;
+        return relicCount * minSandPer1;
+    }
+
+    public int maxSandNeedCalc (int relicCount, int maxSandPer1) {
+        maximumSandNeed = relicCount * maxSandPer1;
+        return relicCount * maxSandPer1;
+    }
 }
