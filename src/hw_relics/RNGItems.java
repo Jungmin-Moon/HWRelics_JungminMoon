@@ -7,15 +7,17 @@ package hw_relics;
 import java.io.Serializable;
 
 enum RNGItems implements Serializable {
-    SAND_NEED(60,75),
-    UMBRITE_NEED(60,75);
+    SAND_NEED(60,75, 0),
+    UMBRITE_NEED(60,75, 75);
     
     private int minNeed;
     private int maxNeed;
+    private int poeticsPer1;
     
-    RNGItems(int min, int max) {
+    RNGItems(int min, int max, int pPer1) {
         minNeed = min;
         maxNeed = max;
+        poeticsPer1 = pPer1;
     }
     
     
@@ -25,6 +27,10 @@ enum RNGItems implements Serializable {
     
     public int getMaxNeed() {
         return maxNeed;
+    }
+    
+    public int getPoeticsPerOne() {
+        return poeticsPer1;
     }
     
 }
