@@ -39,6 +39,7 @@ public class Calculate_Values {
         boneNeeded = 0;
     }
     
+    //Finding total amount of shells/ores/seed/bone needed for the amount of relics they want
     public int totalOresNeeded(int orePerOneRelic, int relicCount) {
         oresNeeded = orePerOneRelic * relicCount;
         return orePerOneRelic * relicCount;
@@ -60,6 +61,7 @@ public class Calculate_Values {
         return bonesPerOneRelic * relicCount;
     }
     
+    //Ores/shell/seed/bone to get
     public int oresNeedToGet(int currentOres) {
         return oresNeeded - currentOres;
     }
@@ -76,7 +78,7 @@ public class Calculate_Values {
         return boneNeeded - currentBone;
     }
     
-    
+    //Umbrite and Sand minimum and maximum calculations needed for amount of relics
     public int minSandNeedCalc(int relicCount, int minSandPer1) {
         minimumSandNeed = relicCount * minSandPer1;
         return relicCount * minSandPer1;
@@ -97,11 +99,49 @@ public class Calculate_Values {
         return relicCount * maxUmbritePer1;
     }
     
+    
+    //poetics required calculation methods. for shell/ore/seed/bone, umbrite, aether oil, singing cluster, pneumite, and ink
+    
+    public int poeticsNeedOre(int poeticsOreValue) {
+        return oresNeeded * poeticsOreValue;
+    }
+    
+    public int poeticsNeedShell(int poeticsShellValue) {
+        return shellsNeeded * poeticsShellValue;
+    }
+    
+    public int poeticsNeedSeed(int poeticsSeedValue) {
+        return seedsNeeded * poeticsSeedValue;
+    }
+    
+    public int poeticsNeedBone(int poeticsBoneValue) {
+        return boneNeeded * poeticsBoneValue;
+    }
+    
+    //beast tribes needed for bones/shell/seeds/ore
+    
+    public int tokensNeedOre(int tokensCostPerOre) {
+        return oresNeeded * tokensCostPerOre;
+    }
+    
+    public int tokensNeedShell(int tokensCostPerShell) {
+        return shellsNeeded * tokensCostPerShell;
+    }
+    
+    public int tokensNeedSeed(int tokensCostPerSeed) {
+        return seedsNeeded * tokensCostPerSeed;
+    }
+    
+    public int tokensNeedBone(int tokensCostPerBone) {
+        return boneNeeded * tokensCostPerBone;
+    }
+    
+    
+    
+    
     /*
     create a method to calculate how many poetics potentially need for umbrites
     create calculation methods for the other poetics items that aren't random
-    
-    create methods for shell/bone/seed/ores via beast tribe tokens
     
     
     */
