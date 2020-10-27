@@ -86,4 +86,23 @@ public class Calculate_Values {
         maximumSandNeed = relicCount * maxSandPer1;
         return relicCount * maxSandPer1;
     }
+    
+    public int minUmbriteCalc(int relicCount, int minUmbritePer1) {
+        minimumUmbriteNeed = relicCount * minUmbritePer1;
+        return relicCount * minUmbritePer1;
+    }
+    
+    public int maxUmbriteCalc(int relicCount, int maxUmbritePer1) {
+        maximumUmbriteNeed = relicCount * maxUmbritePer1;
+        return relicCount * maxUmbritePer1;
+    }
+    
+    /*
+    create a method to calculate how many poetics potentially need for umbrites
+    create calculation methods for the other poetics items that aren't random
+    
+    create methods for shell/bone/seed/ores via beast tribe tokens
+    
+    
+    */
 }
