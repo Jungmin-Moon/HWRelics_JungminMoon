@@ -136,11 +136,36 @@ public class Calculate_Values {
         return boneNeeded * tokensCostPerBone;
     }
     
+    //Other items that are not RNG dependant and thus have set values needed per X amount of relics
+    public int totalOilNeeded(int relicCount, int oilPer1) {
+        oilNeeded = relicCount * oilPer1;
+        return oilNeeded;
+    }
     
+    public int totalClusterNeeded(int relicCount, int clusterPer1) {
+        singingClusterNeeded = relicCount * clusterPer1;
+        return singingClusterNeeded;
+    }
+    
+    public int totalPneumiteNeeded(int relicCount, int pneumitePer1) {
+        pneumiteNeeded = relicCount * pneumitePer1;
+        return pneumiteNeeded;
+    }
+    
+    public int totalInkNeeded(int relicCount, int inkPer1) {
+        inkNeeded = relicCount * inkPer1;
+        return inkNeeded;
+    }
+    
+    
+    //Methods to calculate how many more of each item is needed for non shells/bone/seeds/ore along with sand and umbrite
+    
+    
+    //Methods to calculate poetics needed for each non RNG item 
     
     
     /*
-    create a method to calculate how many poetics potentially need for umbrites
+    
     create calculation methods for the other poetics items that aren't random
     
     
