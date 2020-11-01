@@ -157,13 +157,62 @@ public class Calculate_Values {
         return inkNeeded;
     }
     
-    
+    //will need to edit to check if the current oil user has causes oilneeded to go negative
+    //same with other methods as well.
     //Methods to calculate how many more of each item is needed for non shells/bone/seeds/ore along with sand and umbrite
+    public int returnOilNeedGet(int currentOil) {
+        return oilNeeded - currentOil;
+    }
+    
+    public int returnClusterNeedGet(int currentCluster) {
+        return singingClusterNeeded - currentCluster;
+    }
+    
+    public int returnPneumiteNeedGet(int currentPneumite) {
+        return pneumiteNeeded - currentPneumite;
+    }
+    
+    public int returnInkNeedGet(int currentInk) {
+        return inkNeeded - currentInk;
+    }
+    
+    //methods to find sand and umbrite still needed 
+    
+    public int returnMinSandNeedGet(int currentSand) {
+        return minimumSandNeed - currentSand;
+    }
+    
+    public int returnMaxSandNeedGet(int currentSand) {
+        return maximumSandNeed - currentSand;
+    }
+    
+    public int returnMinUmbriteNeedGet(int currentUmbrite) {
+        return minimumUmbriteNeed - currentUmbrite;
+    }
+    
+    public int returnMaxUmbriteNeedGet(int currentUmbrite) {
+        return maximumUmbriteNeed - currentUmbrite;
+    }
+    
     
     
     //Methods to calculate poetics needed for each non RNG item 
+    //the poeticsPer1 variable in each method represents the cost in poetics for 1 of that item
+    public int returnPoeticsNeedOil(int oilPoeticsPer1) {
+        return oilNeeded * oilPoeticsPer1;
+    }
     
+    public int returnPoeticsNeedCluster(int clusterPoeticsPer1) {
+        return singingClusterNeeded * clusterPoeticsPer1;
+    }
     
+    public int returnPoeticsNeedPneumite(int pneumitePoeticsPer1) {
+        return pneumiteNeeded * pneumitePoeticsPer1;
+    }
+    
+    public int returnPoeticsNeedInk(int inkPoeticsPer1) {
+        return inkNeeded * inkPoeticsPer1;
+    }
     /*
     
     create calculation methods for the other poetics items that aren't random
