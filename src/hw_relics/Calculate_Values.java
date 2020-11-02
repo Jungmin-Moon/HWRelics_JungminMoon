@@ -189,18 +189,38 @@ public class Calculate_Values {
     //same with other methods as well.
     //Methods to calculate how many more of each item is needed for non shells/bone/seeds/ore along with sand and umbrite
     public int returnOilNeedGet(int currentOil) {
+        if(oilNeeded - currentOil < 0) {
+            return -1;
+        } else if(oilNeeded - currentOil == 0) {
+            return 0;
+        }
         return oilNeeded - currentOil;
     }
     
     public int returnClusterNeedGet(int currentCluster) {
+        if(singingClusterNeeded - currentCluster < 0) {
+            return -1;
+        } else if(singingClusterNeeded - currentCluster == 0) {
+            return 0;
+        }
         return singingClusterNeeded - currentCluster;
     }
     
     public int returnPneumiteNeedGet(int currentPneumite) {
+        if(pneumiteNeeded - currentPneumite < 0) {
+            return -1;
+        } else if(pneumiteNeeded - currentPneumite == 0) {
+            return 0;
+        }
         return pneumiteNeeded - currentPneumite;
     }
     
     public int returnInkNeedGet(int currentInk) {
+        if(inkNeeded - currentInk < 0) {
+            return -1;
+        } else if(inkNeeded - currentInk == 0) {
+            return 0;
+        }
         return inkNeeded - currentInk;
     }
     
