@@ -37,6 +37,14 @@ public class Calculate_Values {
         shellsNeeded = 0;
         seedsNeeded = 0;
         boneNeeded = 0;
+        minimumSandNeed = 0;
+        maximumSandNeed = 0;
+        minimumUmbriteNeed = 0;
+        maximumUmbriteNeed = 0;
+        oilNeeded = 0;
+        singingClusterNeeded = 0;
+        pneumiteNeeded = 0;
+        inkNeeded = 0;
     }
     
     //Finding total amount of shells/ores/seed/bone needed for the amount of relics they want
