@@ -76,6 +76,8 @@ public class Calculate_Values {
         } else if(oresNeeded - currentOres == 0) {
             return 0;
         }
+        
+        oresNeeded -= currentOres;
         return oresNeeded - currentOres;
     }
     
@@ -85,6 +87,8 @@ public class Calculate_Values {
         } else if(shellsNeeded - currentShells == 0) {
             return 0;
         }
+        
+        shellsNeeded -= currentShells;
         return shellsNeeded - currentShells;
     }
     
@@ -93,7 +97,8 @@ public class Calculate_Values {
             return -1;
         } else if(seedsNeeded - currentSeeds == 0) {
             return 0;
-        }
+        }    
+        seedsNeeded -= currentSeeds;
         return seedsNeeded - currentSeeds;
     }
     
@@ -103,6 +108,8 @@ public class Calculate_Values {
         } else if(boneNeeded - currentBone == 0) {
             return 0;
         }
+        
+        boneNeeded -= currentBone;
         return boneNeeded - currentBone;
     }
     
@@ -194,6 +201,8 @@ public class Calculate_Values {
         } else if(oilNeeded - currentOil == 0) {
             return 0;
         }
+        
+        oilNeeded -= currentOil;
         return oilNeeded - currentOil;
     }
     
@@ -203,6 +212,8 @@ public class Calculate_Values {
         } else if(singingClusterNeeded - currentCluster == 0) {
             return 0;
         }
+        
+        singingClusterNeeded -= currentCluster;
         return singingClusterNeeded - currentCluster;
     }
     
@@ -212,6 +223,8 @@ public class Calculate_Values {
         } else if(pneumiteNeeded - currentPneumite == 0) {
             return 0;
         }
+        
+        pneumiteNeeded -= currentPneumite;
         return pneumiteNeeded - currentPneumite;
     }
     
@@ -221,6 +234,8 @@ public class Calculate_Values {
         } else if(inkNeeded - currentInk == 0) {
             return 0;
         }
+        
+        inkNeeded -= currentInk;
         return inkNeeded - currentInk;
     }
     
@@ -232,6 +247,8 @@ public class Calculate_Values {
         } else if(minimumSandNeed - currentSand == 0) {
             return 0;
         }
+        
+        minimumSandNeed -= currentSand;
         return minimumSandNeed - currentSand;
     }
     
@@ -241,6 +258,8 @@ public class Calculate_Values {
         } else if(maximumSandNeed - currentSand == 0) {
             return 0;
         }
+        
+        maximumSandNeed -= currentSand;
         return maximumSandNeed - currentSand;
     }
     
@@ -250,6 +269,8 @@ public class Calculate_Values {
         } else if(minimumUmbriteNeed - currentUmbrite == 0) {
             return 0;
         }
+        
+        minimumUmbriteNeed -= currentUmbrite;
         return minimumUmbriteNeed - currentUmbrite;
     }
     
@@ -259,6 +280,7 @@ public class Calculate_Values {
         } else if(maximumUmbriteNeed - currentUmbrite == 0) {
             return 0;
         }
+        maximumUmbriteNeed -= currentUmbrite;
         return maximumUmbriteNeed - currentUmbrite;
     }
     
