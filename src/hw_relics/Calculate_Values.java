@@ -71,18 +71,38 @@ public class Calculate_Values {
     
     //Ores/shell/seed/bone to get
     public int oresNeedToGet(int currentOres) {
+        if(oresNeeded - currentOres < 0) {
+            return -1;
+        } else if(oresNeeded - currentOres == 0) {
+            return 0;
+        }
         return oresNeeded - currentOres;
     }
     
     public int shellsNeedToGet(int currentShells) {
+        if(shellsNeeded - currentShells < 0) {
+            return -1;
+        } else if(shellsNeeded - currentShells == 0) {
+            return 0;
+        }
         return shellsNeeded - currentShells;
     }
     
     public int seedsNeedToGet(int currentSeeds) {
+        if(seedsNeeded - currentSeeds < 0) {
+            return -1;
+        } else if(seedsNeeded - currentSeeds == 0) {
+            return 0;
+        }
         return seedsNeeded - currentSeeds;
     }
     
     public int boneToGet(int currentBone) {
+        if(boneNeeded - currentBone < 0) {
+            return -1;
+        } else if(boneNeeded - currentBone == 0) {
+            return 0;
+        }
         return boneNeeded - currentBone;
     }
     
