@@ -227,18 +227,38 @@ public class Calculate_Values {
     //methods to find sand and umbrite still needed 
     
     public int returnMinSandNeedGet(int currentSand) {
+        if(minimumSandNeed - currentSand < 0) {
+            return -1;
+        } else if(minimumSandNeed - currentSand == 0) {
+            return 0;
+        }
         return minimumSandNeed - currentSand;
     }
     
     public int returnMaxSandNeedGet(int currentSand) {
+        if(maximumSandNeed - currentSand < 0) {
+            return -1;
+        } else if(maximumSandNeed - currentSand == 0) {
+            return 0;
+        }
         return maximumSandNeed - currentSand;
     }
     
     public int returnMinUmbriteNeedGet(int currentUmbrite) {
+        if(minimumUmbriteNeed - currentUmbrite < 0) {
+            return -1;
+        } else if(minimumUmbriteNeed - currentUmbrite == 0) {
+            return 0;
+        }
         return minimumUmbriteNeed - currentUmbrite;
     }
     
     public int returnMaxUmbriteNeedGet(int currentUmbrite) {
+        if(maximumUmbriteNeed - currentUmbrite < 0) {
+            return -1;
+        } else if(maximumUmbriteNeed - currentUmbrite == 0) {
+            return 0;
+        }
         return maximumUmbriteNeed - currentUmbrite;
     }
     
