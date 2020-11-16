@@ -14,7 +14,7 @@ public class HW_Relics {
     
     public static void main(String[] args) {
         
-        
+        /*
         Calculate_Values calcValues = new Calculate_Values();
         HeavenswardRelicCount hwRC = new HeavenswardRelicCount(3);
         
@@ -28,8 +28,25 @@ public class HW_Relics {
         
         hwRC.addOres(currentOres);
         
-        System.out.println();
+        System.out.println(); */
+        
+        boolean cont = true;
+        
+        while(cont) {
+            mainMenu();
+        }
+    }
+    
+    public static void mainMenu() {
+        /*
+        needs options to creating a new list of items needed
+        options to check for each specific item
+        option to add X amounts
+        ...
+        */
+        
         
     }
+    
     
 }
