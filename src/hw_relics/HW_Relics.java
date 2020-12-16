@@ -54,7 +54,13 @@ public class HW_Relics {
         switch(choiceInt) {
             case 1:
                 System.out.println("Do you want to save progress or load?");
-                saveOrLoad();
+                System.out.print("Type save or load for your choice: (capitalization does not matter)");
+                String userSaveOrLoad = sc.nextLine();
+                if(userSaveOrLoad.equalsIgnoreCase("save")) {
+                    saveList(hwCount);
+                } else if(userSaveOrLoad.equalsIgnoreCase("load")) {
+                    hwCount = loadList();
+                }
                 break;
             case 2:
                 int numRelics = takeNumberInput(sc);
@@ -116,7 +122,16 @@ public class HW_Relics {
         return num;
     }
     
-    public static void saveOrLoad() {
+    
+    //two methods one for saving and one for loading
+    //saveList should return a boolean to check if it saved or not.
+    public static void saveList(HeavenswardRelicCount relicListSaveObject) {
         
+    }
+    
+    //returns null or the object if it failed to load. 
+    public static HeavenswardRelicCount loadList() {
+        
+        return null;
     }
 }
