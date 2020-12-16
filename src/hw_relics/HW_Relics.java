@@ -52,11 +52,16 @@ public class HW_Relics {
         int choiceInt = attemptConvert(choice);
         
         switch(choiceInt) {
-            case 1: 
+            case 1:
+                System.out.println("Do you want to save progress or load?");
+                saveOrLoad();
                 break;
             case 2:
                 int numRelics = takeNumberInput(sc);
                 hwCount = createRelicMaterialsList(numRelics);
+                if(hwCount == null) {
+                    System.out.println("List was not created.");
+                }
                 break;
             case 3: 
                 break;
@@ -92,6 +97,8 @@ public class HW_Relics {
         } catch (RelicCountOverflowException e) {
             System.out.println(e.getMessage());
         }
+        
+        
         return null;
     }
     
@@ -107,5 +114,9 @@ public class HW_Relics {
             num = sc.nextInt();
         } while(num <= 0);
         return num;
+    }
+    
+    public static void saveOrLoad() {
+        
     }
 }
