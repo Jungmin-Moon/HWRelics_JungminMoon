@@ -1,5 +1,11 @@
 package hw_relics;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author luckyseven67
@@ -7,7 +13,7 @@ import java.util.Scanner;
 public class HW_Relics {
 
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
         /* Testing
         Calculate_Values calcValues = new Calculate_Values();
@@ -32,7 +38,7 @@ public class HW_Relics {
         }
     }
     
-    public static boolean mainMenu() {
+    public static boolean mainMenu() throws FileNotFoundException, IOException {
         /*
         needs options to creating a new list of items needed
         options to check for each specific item
@@ -44,6 +50,8 @@ public class HW_Relics {
         
         Scanner sc = new Scanner(System.in);
         HeavenswardRelicCount hwCount;
+        FileOutputStream relicSaveFile = new FileOutputStream("Relic List.ser");
+        ObjectOutputStream relicFile = new ObjectOutputStream(relicSaveFile);
         
         System.out.println("Please enter an option for your choice. Choose 0 to break out of the menu: ");
         
@@ -57,7 +65,7 @@ public class HW_Relics {
                 System.out.print("Type save or load for your choice: (capitalization does not matter)");
                 String userSaveOrLoad = sc.nextLine();
                 if(userSaveOrLoad.equalsIgnoreCase("save")) {
-                    saveList(hwCount);
+                    saveList(hwCount, relicFile);
                 } else if(userSaveOrLoad.equalsIgnoreCase("load")) {
                     hwCount = loadList();
                 }
@@ -125,8 +133,17 @@ public class HW_Relics {
     
     //two methods one for saving and one for loading
     //saveList should return a boolean to check if it saved or not.
-    public static void saveList(HeavenswardRelicCount relicListSaveObject) {
-        
+    //or perhaps not
+    public static void saveList(HeavenswardRelicCount relicListSaveObject, ObjectOutputStream oos) {
+        if(relicListSaveObject == null) {
+            System.out.println("No list created. There is nothing to save.");
+        } else {
+            try {
+                oos.writeObject(relicListSaveObject);
+            } catch (IOException ex) {
+                System.out.println("Error finding file to save to.");
+            }
+        }
     }
     
     //returns null or the object if it failed to load. 
