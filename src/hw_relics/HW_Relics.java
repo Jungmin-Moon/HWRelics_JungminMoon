@@ -71,6 +71,9 @@ public class HW_Relics {
                     saveList(hwCount, relicFile);
                 } else if(userSaveOrLoad.equalsIgnoreCase("load")) {
                     hwCount = loadList(fileToLoad);
+                    if(hwCount == null) {
+                        System.out.println("Nothing was loaded. Please create a list.");
+                    }
                 }
                 break;
             case 2:
