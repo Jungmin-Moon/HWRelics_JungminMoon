@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 public class HW_Relics {
 
     
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, FileNotFoundException, ClassNotFoundException {
         
         /* Testing
         Calculate_Values calcValues = new Calculate_Values();
