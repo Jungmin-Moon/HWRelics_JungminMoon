@@ -1,7 +1,9 @@
 package hw_relics;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -38,7 +40,7 @@ public class HW_Relics {
         }
     }
     
-    public static boolean mainMenu() throws FileNotFoundException, IOException {
+    public static boolean mainMenu() throws FileNotFoundException, IOException, ClassNotFoundException {
         /*
         needs options to creating a new list of items needed
         options to check for each specific item
@@ -52,6 +54,7 @@ public class HW_Relics {
         HeavenswardRelicCount hwCount;
         FileOutputStream relicSaveFile = new FileOutputStream("Relic List.ser");
         ObjectOutputStream relicFile = new ObjectOutputStream(relicSaveFile);
+        FileInputStream fileToLoad = new FileInputStream("Relic List.ser");
         
         System.out.println("Please enter an option for your choice. Choose 0 to break out of the menu: ");
         
@@ -67,7 +70,7 @@ public class HW_Relics {
                 if(userSaveOrLoad.equalsIgnoreCase("save")) {
                     saveList(hwCount, relicFile);
                 } else if(userSaveOrLoad.equalsIgnoreCase("load")) {
-                    hwCount = loadList();
+                    hwCount = loadList(fileToLoad);
                 }
                 break;
             case 2:
@@ -147,8 +150,22 @@ public class HW_Relics {
     }
     
     //returns null or the object if it failed to load. 
-    public static HeavenswardRelicCount loadList() {
-        
+    public static HeavenswardRelicCount loadList(FileInputStream fis) throws ClassNotFoundException {
+        ObjectInputStream fileLoad = null;
+        try {
+            HeavenswardRelicCount temp;
+            fileLoad = new ObjectInputStream(fis);
+            temp = (HeavenswardRelicCount) fileLoad.readObject();
+            return temp;
+        } catch (IOException ex) {
+            System.out.println("Unable to find file to load.");
+        } finally {
+            try {
+                fileLoad.close();
+            } catch (IOException ex) {
+                System.out.println("Unable to find t he file.");
+            }
+        }
         return null;
     }
 }
