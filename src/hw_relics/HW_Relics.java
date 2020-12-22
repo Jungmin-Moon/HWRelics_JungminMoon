@@ -63,6 +63,7 @@ public class HW_Relics {
         int choiceInt = attemptConvert(choice);
         
         //checking 2 fa line again
+        //checking to make ssure use of Personal Token allowed push
         switch(choiceInt) {
             case 1:
                 System.out.println("Do you want to save progress or load?");
