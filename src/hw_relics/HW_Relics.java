@@ -62,7 +62,7 @@ public class HW_Relics {
         
         int choiceInt = attemptConvert(choice);
         
-        //checking 2 fa line
+        //checking 2 fa line again
         switch(choiceInt) {
             case 1:
                 System.out.println("Do you want to save progress or load?");
