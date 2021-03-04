@@ -51,7 +51,8 @@ public class HW_Relics {
         boolean keepGoing = true;
         
         Scanner sc = new Scanner(System.in);
-        HeavenswardRelicCount hwCount;
+        //place holder
+        HeavenswardRelicCount hwCount = null;
         FileOutputStream relicSaveFile = new FileOutputStream("Relic List.ser");
         ObjectOutputStream relicFile = new ObjectOutputStream(relicSaveFile);
         FileInputStream fileToLoad = new FileInputStream("Relic List.ser");
@@ -168,7 +169,7 @@ public class HW_Relics {
             try {
                 fileLoad.close();
             } catch (IOException ex) {
-                System.out.println("Unable to find t he file.");
+                System.out.println("Unable to find the file.");
             }
         }
         return null;
